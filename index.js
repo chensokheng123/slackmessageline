@@ -119,7 +119,7 @@ async function get_message_each_sixHours() {
             });
             await client.pushMessage(process.env.GROUP_ID, {
                 type: 'text',
-                text: `#:${doc.channel_name} [new message: ${data.messages.length}]\nhttps://code4kit.slack.com/archives/${doc.channel_id}\n`
+                text: `#${doc.channel_name} [new message: ${data.messages.length}]\nhttps://code4kit.slack.com/archives/${doc.channel_id}\n`
             });
         }
         db.remove({}, {
