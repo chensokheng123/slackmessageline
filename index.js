@@ -108,7 +108,7 @@ const saveToDb = async () => {
 }
 
 
-async function get_message_each_fiveMinute() {
+async function get_message_each_sixHours() {
     try {
         let docs = await db.asyncFind({});
         for (const doc of docs) {
@@ -149,7 +149,7 @@ async function getLastMessage() {
 getLastMessage();
 const sendMessage = new CronJob('0-23/6 * * * *', async function () {
     try {
-        await get_message_each_fiveMinute();
+        await get_message_each_sixHours();
         await getLastMessage();
     } catch (e) {
         console.log(e);
