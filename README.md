@@ -20,7 +20,7 @@ https://developers.line.biz/en/docs/messaging-api/getting-started/
 
 ## Prerequisites
 ```sh
-  ground line ID: Get that from line webhook
+  group line ID: Get that from line webhook
 ```
 
 ## Usage
