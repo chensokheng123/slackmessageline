@@ -36,9 +36,6 @@ npm run start
 * Twitter: [@chensokheng](https://twitter.com/chensokheng)
 * Github: [@chensokheng](https://github.com/chensokheng)
 
-## Show your support
+## Testing result 
+![66595063_2275023285884055_2007283700571570176_n](https://user-images.githubusercontent.com/47372923/60949346-303b0a00-a31f-11e9-929a-cb8a0dea31fe.jpg)
 
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
