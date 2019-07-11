@@ -117,10 +117,13 @@ async function get_message_each_sixHours() {
                 limit: 100,
                 oldest: doc.channel_last_ts
             });
-            await client.pushMessage(process.env.GROUP_ID, {
-                type: 'text',
-                text: `#${doc.channel_name} [new message: ${data.messages.length}]\nhttps://code4kit.slack.com/archives/${doc.channel_id}\n`
-            });
+            if (data.messages.length !== 0) {
+                let msglength = data.messages.length === 100 ? "100+" : data.messages.length;
+                await client.pushMessage(process.env.GROUP_ID, {
+                    type: 'text',
+                    text: `#${doc.channel_name} [ new message: ${msglength} ]\nhttps://code4kit.slack.com/archives/${doc.channel_id}\n`
+                });
+            }
         }
         db.remove({}, {
             multi: true
@@ -147,7 +150,7 @@ async function getLastMessage() {
 
 
 getLastMessage();
-const sendMessage = new CronJob('0-23/6 * * * *', async function () {
+const sendMessage = new CronJob('1 */6 * * *', async function () {
     try {
         await get_message_each_sixHours();
         await getLastMessage();

@@ -30,7 +30,17 @@ npm run start
 ```
 
 ## Author
-
+## Show your support
+43
+​
+44
+Give a ⭐️ if this project helped you!
+45
+​
+46
+***
+47
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
 👤 **sokheng chen**
 
 * Twitter: [@chensokheng](https://twitter.com/chensokheng)
